@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1d51835fab981e14388ce62bec06136b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - whiteFlashMat: {fileID: 2100000, guid: b3b89f185526a0249b1033c81b75b48d, type: 2}
+  - redFlashMat: {fileID: 2100000, guid: 4ee5ce0e922ef6b4e8e3242e5a3fc083, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 774600906589447576}
   - component: {fileID: 6104884240521143224}
   - component: {fileID: 2529932512612191922}
+  - component: {fileID: 2753744217449266335}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -295,3 +296,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2072706a8182b4f8726104edea4bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackTime: 0.2
+--- !u!114 &2753744217449266335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3168065590547973604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d51835fab981e14388ce62bec06136b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redFlashMat: {fileID: 2100000, guid: 4ee5ce0e922ef6b4e8e3242e5a3fc083, type: 2}
+  whiteFlashMat: {fileID: 2100000, guid: b3b89f185526a0249b1033c81b75b48d, type: 2}
+  redFlashDuration: 0.05
+  whiteFlashDuration: 0.1

@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -7,8 +7,11 @@ public class EnemyHealth : MonoBehaviour
 
     private int currentHealth;
     private Knockback knockback;
+    private Flash flash;
 
-    private void Awake() {
+    private void Awake()
+    {
+        flash = GetComponent<Flash>();
         knockback = GetComponent<Knockback>();
     }
 
@@ -21,6 +24,13 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
         knockback.GetKnockedBack(Player.Instance.transform, Player.Instance.GetKnockbackThrustAmount);
+        flash.FlashRoutine();
+        StartCoroutine(WaitAndDetectDeath());
+    }
+
+    private IEnumerator WaitAndDetectDeath()
+    {
+        yield return new WaitForSeconds(flash.WhiteFlashDuration * 2);
         DetectDeath();
     }
 
