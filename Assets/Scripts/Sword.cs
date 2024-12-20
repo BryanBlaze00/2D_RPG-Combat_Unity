@@ -5,6 +5,7 @@ public class Sword : MonoBehaviour
 {
     [SerializeField] private GameObject slashAnimPrefab;
     [SerializeField] private Transform slashAnimSpawnPoint;
+    [SerializeField] private Transform swordCollider;
 
     private PlayerControls playerControls;
     private Animator myAnimator;
@@ -39,22 +40,25 @@ public class Sword : MonoBehaviour
     private void Attack()
     {
         myAnimator.SetTrigger("Attack");
+        swordCollider.gameObject.SetActive(true);
 
         slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity);
         slashAnim.transform.parent = this.transform.parent;
     }
 
+    public void DoneAttackingAnimEvent() => swordCollider.gameObject.SetActive(false);
+
     public void SlashUpAnimEvent()
     {
-        FlipLeft_X_Angle(-180);
+        AnimFlipLeft_and_xAngle(-180);
     }
 
     public void SlashDownAnimEvent()
     {
-        FlipLeft_X_Angle(0);
+        AnimFlipLeft_and_xAngle(0);
     }
 
-    private void FlipLeft_X_Angle(int xAngle)
+    private void AnimFlipLeft_and_xAngle(int xAngle)
     {
         slashAnim.transform.rotation = Quaternion.Euler(xAngle, 0, 0);
 
@@ -69,15 +73,26 @@ public class Sword : MonoBehaviour
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(player.transform.position);
         Vector3 mousePosition = Input.mousePosition;
 
+        /*
+            *** Weapon will follow the mouse with offset ***
+
+            * atan2(y,x) returns the angle whose tangent is the quotient of two specified numbers.
+            * The return value is the angle in radians in the range of -pi to pi.
+            * The atan2 function is useful in calculating the angle from a specified point to the origin.
+            * The following example calculates the angle from the point (x, y) to the origin.
+            * float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
+        */
         float angle = Mathf.Atan2(mousePosition.y, playerScreenPoint.x) * Mathf.Rad2Deg;
 
         if (playerScreenPoint.x > mousePosition.x)
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 180, angle);
+            swordCollider.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
             activeWeapon.transform.rotation = Quaternion.Euler(0, 0, angle);
+            swordCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }
