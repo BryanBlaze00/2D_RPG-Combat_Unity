@@ -4,11 +4,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
 
+    public bool FacingLeft { get { return facingLeft; } private set { facingLeft = value; } }
+    private bool facingLeft = false;
+
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator myAnimator;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;    
 
     private void Awake()
     {
@@ -53,8 +56,14 @@ public class Player : MonoBehaviour
         Vector3 mousePosition = Input.mousePosition;
 
         if (playerScreenPoint.x > mousePosition.x)
+        {
             spriteRenderer.flipX = true;
+            FacingLeft = true;
+        }
         else
+        {
             spriteRenderer.flipX = false;
+            FacingLeft = false;
+        }
     }
 }
