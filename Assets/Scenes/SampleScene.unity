@@ -1117,6 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a77bc5a390c74be4aaa093ee6d1f859a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 10
 --- !u!1001 &1244127498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1724,6 +1725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  knockbackThrustAmount: 10
 --- !u!50 &1860260455
 Rigidbody2D:
   serializedVersion: 5

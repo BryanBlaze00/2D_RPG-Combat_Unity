@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
+    public static Player Instance;
 
+    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float knockbackThrustAmount = 5f;
+
+    public float GetKnockbackThrustAmount { get { return knockbackThrustAmount; } }
     public bool FacingLeft { get { return facingLeft; } private set { facingLeft = value; } }
     private bool facingLeft = false;
 
@@ -15,6 +19,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
