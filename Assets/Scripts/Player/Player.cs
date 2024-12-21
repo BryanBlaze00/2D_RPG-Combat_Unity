@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private TrailRenderer myTrailRenderer;
 
     public float GetKnockbackThrustAmount { get { return knockbackThrustAmount; } }
-    public bool FacingLeft { get { return facingLeft; } private set { facingLeft = value; } }
+    public bool FacingLeft { get { return facingLeft; } }
     private bool facingLeft = false;
     private bool isDashing = false;
 
@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer spriteRenderer;
+    private float startingMoveSpeed;
 
     private void Awake()
     {
@@ -33,6 +34,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         playerControls.Combat.Dash.performed += _ => Dash();
+
+        startingMoveSpeed = moveSpeed;
     }
 
     private void OnEnable()
@@ -72,12 +75,12 @@ public class Player : MonoBehaviour
         if (playerScreenPoint.x > mousePosition.x)
         {
             spriteRenderer.flipX = true;
-            FacingLeft = true;
+            facingLeft = true;
         }
         else
         {
             spriteRenderer.flipX = false;
-            FacingLeft = false;
+            facingLeft = false;
         }
     }
 
@@ -96,7 +99,7 @@ public class Player : MonoBehaviour
         float dashTime = .2f;
         float dashCD = .25f;
         yield return new WaitForSeconds(dashTime);
-        moveSpeed /= dashSpeed;
+        moveSpeed = startingMoveSpeed;
         myTrailRenderer.emitting = false;
         yield return new WaitForSeconds(dashCD);
         isDashing = false;

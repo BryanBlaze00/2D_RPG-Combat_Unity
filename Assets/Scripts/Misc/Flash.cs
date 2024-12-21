@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Flash : MonoBehaviour
 {
-    [SerializeField] private Material redFlashMat;
     [SerializeField] private Material whiteFlashMat;
     [SerializeField] private float redFlashDuration = 0.1f;
     [SerializeField] private float whiteFlashDuration = 0.2f;
@@ -26,7 +25,6 @@ public class Flash : MonoBehaviour
     private IEnumerator FlashRedRoutine()
     {
         spriteRenderer.color = Color.red;
-        // spriteRenderer.material = redFlashMat;
         yield return new WaitForSeconds(redFlashDuration);
         spriteRenderer.color = Color.white;
         StartCoroutine(FlashWhiteRoutine());
