@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 22477471}
   - component: {fileID: 22477470}
   - component: {fileID: 22477469}
-  - component: {fileID: 22477468}
   - component: {fileID: 22477467}
+  - component: {fileID: 22477473}
   m_Layer: 0
   m_Name: Canopy (2)
   m_TagString: Untagged
@@ -170,51 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &22477468
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22477465}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 22477465}
 --- !u!19719996 &22477469
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -1618,6 +1573,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &22477473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22477465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1001 &58963397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26293,8 +26261,8 @@ GameObject:
   - component: {fileID: 354518324}
   - component: {fileID: 354518323}
   - component: {fileID: 354518322}
-  - component: {fileID: 354518321}
   - component: {fileID: 354518320}
+  - component: {fileID: 354518326}
   m_Layer: 0
   m_Name: Canopy (5)
   m_TagString: Untagged
@@ -26331,51 +26299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &354518321
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354518318}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 354518318}
 --- !u!19719996 &354518322
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -27729,6 +27652,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &354518326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354518318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1 &443975886
 GameObject:
   m_ObjectHideFlags: 0
@@ -28004,8 +27940,8 @@ GameObject:
   - component: {fileID: 588592935}
   - component: {fileID: 588592934}
   - component: {fileID: 588592933}
-  - component: {fileID: 588592932}
   - component: {fileID: 588592931}
+  - component: {fileID: 588592937}
   m_Layer: 0
   m_Name: Canopy (6)
   m_TagString: Untagged
@@ -28042,51 +27978,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &588592932
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 588592929}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 588592929}
 --- !u!19719996 &588592933
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -30120,6 +30011,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &588592937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588592929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1 &595678178
 GameObject:
   m_ObjectHideFlags: 0
@@ -57481,8 +57385,8 @@ GameObject:
   - component: {fileID: 1252026342}
   - component: {fileID: 1252026347}
   - component: {fileID: 1252026346}
-  - component: {fileID: 1252026345}
   - component: {fileID: 1252026344}
+  - component: {fileID: 1252026348}
   m_Layer: 0
   m_Name: Canopy
   m_TagString: Untagged
@@ -58227,51 +58131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &1252026345
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252026340}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 1252026340}
 --- !u!19719996 &1252026346
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -58337,6 +58196,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1252026348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252026340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1 &1284432812
 GameObject:
   m_ObjectHideFlags: 0
@@ -58447,8 +58319,8 @@ GameObject:
   - component: {fileID: 1391735800}
   - component: {fileID: 1391735799}
   - component: {fileID: 1391735798}
-  - component: {fileID: 1391735797}
   - component: {fileID: 1391735796}
+  - component: {fileID: 1391735802}
   m_Layer: 0
   m_Name: Canopy (1)
   m_TagString: Untagged
@@ -58485,51 +58357,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &1391735797
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391735794}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 1391735794}
 --- !u!19719996 &1391735798
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -59113,6 +58940,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1391735802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391735794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1001 &1410231540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59188,8 +59028,8 @@ GameObject:
   - component: {fileID: 1436484810}
   - component: {fileID: 1436484809}
   - component: {fileID: 1436484808}
-  - component: {fileID: 1436484807}
   - component: {fileID: 1436484806}
+  - component: {fileID: 1436484812}
   m_Layer: 0
   m_Name: Canopy (8)
   m_TagString: Untagged
@@ -59226,51 +59066,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &1436484807
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436484804}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 1436484804}
 --- !u!19719996 &1436484808
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -61214,6 +61009,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1436484812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436484804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1001 &1460638408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61447,8 +61255,8 @@ GameObject:
   - component: {fileID: 1715028414}
   - component: {fileID: 1715028413}
   - component: {fileID: 1715028412}
-  - component: {fileID: 1715028411}
   - component: {fileID: 1715028410}
+  - component: {fileID: 1715028416}
   m_Layer: 0
   m_Name: Canopy (4)
   m_TagString: Untagged
@@ -61485,51 +61293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &1715028411
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715028408}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 1715028408}
 --- !u!19719996 &1715028412
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -63123,6 +62886,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1715028416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715028408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1 &1762992487
 GameObject:
   m_ObjectHideFlags: 0
@@ -63182,8 +62958,8 @@ GameObject:
   - component: {fileID: 1789267409}
   - component: {fileID: 1789267408}
   - component: {fileID: 1789267407}
-  - component: {fileID: 1789267406}
   - component: {fileID: 1789267405}
+  - component: {fileID: 1789267411}
   m_Layer: 0
   m_Name: Canopy (3)
   m_TagString: Untagged
@@ -63220,51 +62996,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &1789267406
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789267403}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 1789267403}
 --- !u!19719996 &1789267407
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -65228,6 +64959,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1789267411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789267403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1001 &1803837880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65755,8 +65499,8 @@ GameObject:
   - component: {fileID: 2030550755}
   - component: {fileID: 2030550754}
   - component: {fileID: 2030550753}
-  - component: {fileID: 2030550752}
   - component: {fileID: 2030550751}
+  - component: {fileID: 2030550757}
   m_Layer: 0
   m_Name: Canopy (7)
   m_TagString: Untagged
@@ -65793,51 +65537,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparancyAmount: 0.85
   fadeTime: 0.35
---- !u!66 &2030550752
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030550749}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 2030550749}
 --- !u!19719996 &2030550753
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -67981,6 +67680,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2030550757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030550749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453f4a155553c7449bb1ef59de0b5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxOffset: -0.3
 --- !u!1 &2053699807
 GameObject:
   m_ObjectHideFlags: 0
