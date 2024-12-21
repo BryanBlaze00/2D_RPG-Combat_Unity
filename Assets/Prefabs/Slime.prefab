@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 50
+  deathParticles: {fileID: 4161249625931637470, guid: 95bfc0a3000b93a44b3adb1cb76bf8bf, type: 3}
 --- !u!114 &2529932512612191922
 MonoBehaviour:
   m_ObjectHideFlags: 0
