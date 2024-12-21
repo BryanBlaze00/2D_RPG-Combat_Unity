@@ -1,21 +1,25 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance;
 
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private float knockbackThrustAmount = 5f;
+    [SerializeField] private TrailRenderer myTrailRenderer;
 
     public float GetKnockbackThrustAmount { get { return knockbackThrustAmount; } }
     public bool FacingLeft { get { return facingLeft; } private set { facingLeft = value; } }
     private bool facingLeft = false;
+    private bool isDashing = false;
 
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator myAnimator;
-    private SpriteRenderer spriteRenderer;    
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
@@ -24,6 +28,11 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        playerControls.Combat.Dash.performed += _ => Dash();
     }
 
     private void OnEnable()
@@ -70,5 +79,26 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = false;
             FacingLeft = false;
         }
+    }
+
+    private void Dash()
+    {
+        if (isDashing) { return; }
+
+        isDashing = true;
+        moveSpeed *= dashSpeed;
+        myTrailRenderer.emitting = true;
+        StartCoroutine(EndDashRoutine());
+    }
+
+    private IEnumerator EndDashRoutine()
+    {
+        float dashTime = .2f;
+        float dashCD = .25f;
+        yield return new WaitForSeconds(dashTime);
+        moveSpeed /= dashSpeed;
+        myTrailRenderer.emitting = false;
+        yield return new WaitForSeconds(dashCD);
+        isDashing = false;
     }
 }
