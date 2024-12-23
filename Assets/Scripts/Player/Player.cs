@@ -1,30 +1,30 @@
 using System.Collections;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Singleton<Player>
 {
-    public static Player Instance;
-
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float dashSpeed = 4f;
-    [SerializeField] private float knockbackThrustAmount = 5f;
     [SerializeField] private TrailRenderer myTrailRenderer;
+    [SerializeField] private float knockbackThrustAmount = 5f;
 
     public float GetKnockbackThrustAmount { get { return knockbackThrustAmount; } }
     public bool FacingLeft { get { return facingLeft; } }
     private bool facingLeft = false;
     private bool isDashing = false;
+    private float startingMoveSpeed;
 
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer spriteRenderer;
-    private float startingMoveSpeed;
 
-    private void Awake()
+    //
+    protected override void Awake()
     {
-        Instance = this;
+        base.Awake();
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
